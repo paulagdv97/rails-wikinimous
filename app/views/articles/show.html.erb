@@ -1,0 +1,11 @@
+<div class="container">
+  <h2><%= @article.title %></h2>
+  <p><%= @article.content %></p>
+
+  <p><%=link_to "Do you want to edit this article? ✍🏽", edit_article_path %></p>
+  <p><%=link_to "Back to all tasks! 🔙", articles_path %></p>
+  <%= link_to "Delete task 🗑",
+              article_path(@article),
+              method: :delete,
+              data: { confirm: "Are you sure you want to delete this?" } %>
+</div>

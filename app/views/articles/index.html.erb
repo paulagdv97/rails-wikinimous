@@ -1,0 +1,9 @@
+<div class = "container">
+  <h1>My Wiki Articles 📚</h1>
+  <ul>
+    <% @articles.each do |article| %>
+      <li><%=link_to article.title, article_path(article.id) %></li>
+    <% end %>
+  </ul>
+    <p><%=link_to "Create a new article", article_path(:new) %></p>
+</div>
